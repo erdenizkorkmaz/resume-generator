@@ -4,5 +4,88 @@
     "location": "London, UK",
     "mail": "hi@erdeniz.co.uk",
     "phone": "+44 07462097733",
-    "github": "https://github.com/erdenizkorkmaz"
+    "github": "https://github.com/erdenizkorkmaz",
+    "aboutme": "I'm a web developer with 7+ years of experience in Angular, React, Flutter, Node.js, .NET, and MongoDB. I developed and designed modern and secure web applications that stand out in the Fintech, Tourism, and Education sectors. I'm committed to delivering seamless cross-browser performance, high-quality testing, and impactful UI/UX design. Beyond coding, I adept myself in designing mobile/desktop applications and managing small projects with Agile/Scrum.",
+    "company": "Microsoft",
+    "experiences": [
+        {
+            "company": "Lorem LTD.",
+            "role": "Director",
+            "date": {
+                "start": "September 2017",
+                "end": "October 2021"
+            },
+            "description": "hello",
+            "projects": [
+                {
+                    "name": "Lorem Project",
+                    "role": "Team Leader",
+                    "tech": [
+                        "Angular",
+                        "Node.js",
+                        "MongoDB"
+                    ]
+                },
+                {
+                    "name": "Lorem Project",
+                    "role": "Team Leader",
+                    "tech": [
+                        "Angular",
+                        "Node.js",
+                        "MongoDB"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Lorem LTD.",
+            "role": "Director",
+            "date": {
+                "start": "September 2017",
+                "end": "October 2021"
+            },
+            "description": "hello",
+            "projects": [
+                {
+                    "name": "Lorem Project",
+                    "role": "Team Leader",
+                    "tech": [
+                        "Angular",
+                        "Node.js",
+                        "MongoDB"
+                    ]
+                },
+                {
+                    "name": "Lorem Project",
+                    "role": "Team Leader",
+                    "tech": [
+                        "Angular",
+                        "Node.js",
+                        "MongoDB"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Lorem LTD.",
+            "role": "Director",
+            "date": {
+                "start": "September 2017",
+                "end": "October 2021"
+            },
+            "description": "hello",
+            "projects": []
+        },
+
+        {
+            "company": "Lorem LTD.",
+            "role": "Director",
+            "date": {
+                "start": "September 2017",
+                "end": "October 2021"
+            },
+            "description": "hello",
+            "projects": []
+        }
+    ]
 }

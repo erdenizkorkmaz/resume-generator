@@ -5,19 +5,17 @@ import Link from 'next/link';
 async function getData() {
   const filePath = path.join(process.cwd(), 'public', 'data.json');
   const jsonData = fs.readFileSync(filePath, 'utf8');
- 
-  // Parse the JSON data
-  const data = JSON.parse(jsonData);
 
-  // Return the JSON data
+  const data = JSON.parse(jsonData);
   return data;
 }
 
 export default async function Home() {
-  const data = await getData()
+  const data = await getData();
+  console.log(data.experiences.length);
   return (
-    <main className="flex min-h-screen flex-col gap-8">
-      <div className="flex flex-col gap-4">
+    <main className="flex min-h-screen flex-col gap-8 p-2">
+      <div className="flex flex-col gap-4 p-4 border border-black">
         <div className="flex items-center justify-between">
           <div className="flex flex-col w-2/3">
             <h1 className="text-2xl">
@@ -33,64 +31,39 @@ export default async function Home() {
             </ul>
           </div>
           <div className="text-center text-sm">
-            <span>This resume is prepared <br/>
-                  for <b className="text-base">Microsoft</b>
+            <span>This resume is prepared <br />
+              for <b className="text-base">{data.company}</b>
             </span>
           </div>
         </div>
         <div>
-          <p className="text-sm">I'm a web developer with 7+ years of experience in Angular, React, Flutter, Node.js, .NET, and MongoDB. I developed and designed modern and secure web applications that stand out in the Fintech, Tourism, and Education sectors. I'm committed to delivering seamless cross-browser performance, high-quality testing, and impactful UI/UX design. Beyond coding, I adept myself in designing mobile/desktop applications and managing small projects with Agile/Scrum.</p>
+          <p className="text-sm">{data.aboutme}</p>
         </div>
       </div>
       <div className="flex flex-col gap-2">
         <h2 className="text-xl">Experiences</h2>
         <ul className="flex flex-col gap-4">
-          <li>
-            <div className="flex flex-col gap-2">
+          { data.experiences.map((item: any, index: number) => {
+            return <li key={index}>
               <div className="flex flex-col gap-2">
-                <div className="flex flex-col">
-                  <b className="text-lg">Lorem LTD. - Director</b>
-                  <span>September 2017 - October 2021</span>
+                <div className="flex flex-col gap-2">
+                  <div className="flex flex-col">
+                    <b className="text-lg">{item.company} - {item.role}</b>
+                    <span>{item.date.start} - {item.date.end}</span>
+                  </div>
+                  <p className="text-sm">{item.description}</p>
                 </div>
-                <p className="text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, deleniti! Alias earum culpa dolor dolorem
-  cupiditate perferendis velit doloribus a ipsam explicabo ex quaerat minus nam repellendus, omnis cumque
-  voluptatibus. orem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <ul className="flex flex-wrap gap-2">
+                  { item.projects.map((project: any, index: number) => {
+                    return <li key={index} className="flex flex-col w-2/5 p-2">
+                      <b>{project.name} - {project.role}</b>
+                      <span>{project.tech.join(', ')}</span>
+                    </li>
+                  })}
+                </ul>
               </div>
-              <ul className="flex flex-wrap gap-2">
-                <li className="flex flex-col w-2/5">
-                  <b>Lorem Project - Team Leader</b>
-                  <span>Angular, Node.js, MongoDB</span>
-                </li>
-                <li className="flex flex-col w-2/5">
-                  <b>Lorem Project - Team Leader</b>
-                  <span>Angular, Node.js, MongoDB</span>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div className="flex flex-col gap-2">
-              <div className="flex flex-col gap-2">
-                <div className="flex flex-col">
-                  <b className="text-lg">Lorem LTD. - Director</b>
-                  <span>September 2017 - October 2021</span>
-                </div>
-                <p className="text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, deleniti! Alias earum culpa dolor dolorem
-  cupiditate perferendis velit doloribus a ipsam explicabo ex quaerat minus nam repellendus, omnis cumque
-  voluptatibus. orem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              </div>
-              <ul className="flex flex-wrap gap-2">
-                <li className="flex flex-col w-2/5">
-                  <b>Lorem Project - Team Leader</b>
-                  <span>Angular, Node.js, MongoDB</span>
-                </li>
-                <li className="flex flex-col w-2/5">
-                  <b>Lorem Project - Team Leader</b>
-                  <span>Angular, Node.js, MongoDB</span>
-                </li>
-              </ul>
-            </div>
-          </li>
+            </li>
+          })}
         </ul>
       </div>
     </main>
