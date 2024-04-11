@@ -1,9 +1,9 @@
 {
     "name": "Erdeniz Korkmaz",
-    "job": "Frontend Developer",
+    "job": "Fullstack Web/Mobile Developer",
     "location": "London, UK",
-    "mail": "erdeniz@dakik.co.uk",
-    "phone": "+44 07950497404",
+    "mail": "hi@erdeniz.co.uk",
+    "phone": "+44 07462097733",
     "github": "erdenizkorkmaz",
     "aboutme": "Hi, I'm Erdeniz, a web/mobile developer with over a decade of crafting standout web and mobile applications in Fintech, Tourism, and Education. Skilled in Angular, React, Next.js, Flutter, Node.js, .NET, MongoDB, and design with Figma, I focus on building secure, modern platforms with exceptional UI/UX. Currently, I'm expanding my expertise into team management and marketing.",
     "company": "",
@@ -15,7 +15,7 @@
                 "start": "October 2021",
                 "end": "April 2024"
             }],
-            "description": "Founded Dakik when I move to London. As Director of Dakik, my journey in leading a team of creative minds is driven by a passion for making digital art that stands out. We crafted unique websites, apps, and logos, focusing on fast and reliable products to help businesses grow. I'm proud of every moment of it. You can find some of projects we developed.",
+            "description": "I founded Dakik when I move to London. As Director of Dakik, my journey in leading a team of creative minds is driven by a passion for making digital art that stands out. We crafted unique websites, apps, and logos, focusing on fast and reliable products to help businesses grow. I'm proud of every moment of it. You can find some of projects we developed.",
             "projects": [
                 {
                     "name": "jeton.com",
@@ -56,7 +56,7 @@
         },
         {
             "company": "Mikro Yazilim",
-            "description": "Started at Mikro, a Fintech company, as a Senior Frontend Developer and moved up to Team Leader within a year. My job was leading a team to build and test features that work well across different browsers. I also helped organize meetings to plan tasks with the design and QA teams. More details on these projects are below.",
+            "description": "I started at Mikro, a Fintech company, as a Senior Frontend Developer and moved up to Team Leader within a year. My job was leading a team to build and test features that work well across different browsers. I also helped organize meetings to plan tasks with the design and QA teams. More details on these projects are below.",
             "dates": [
                 {
                     "role" : "Senior Frontend Team Lead",
@@ -108,7 +108,7 @@
                         "Redis",
                         "MongoDB",
                         "GrayLog",
-                        "SonarQube"
+                        "SonarCube"
                     ]
                 }
             ]
@@ -123,50 +123,17 @@
                     "end": "September 2019"
                 },
                 {
-                    "role": "Mid-Senior Frontend Developer",
+                    "role": "Senior Frontend Developer",
+                    "start": "July 2016",
+                    "end": "July 2018"
+                },
+                {
+                    "role": "Mid Frontend Developer",
                     "start": "October 2015",
                     "end": "July 2018"
                 }
             ],
-            "projects": [
-                {
-                    "name": "Ilonsi.com",
-                    "role": "Team Leader",
-                    "tech": [
-                        "Vue.js",
-                        "PHP Laravel",
-                        "MySQL"
-                    ]
-                },
-                {
-                    "name": "finuans.com",
-                    "role": "Team Leader",
-                    "tech": [
-                        "Vue.js",
-                        "PHP Laravel",
-                        "MySQL"
-                    ]
-                },
-                {
-                    "name": "Explace - Android App",
-                    "role": "Team Leader",
-                    "tech": [
-                        "React Native",
-                        "Firebase",
-                        "Node.Js"
-                    ]
-                },
-                {
-                    "name": "AmyVillas.co.uk",
-                    "role": "Team Leader",
-                    "tech": [
-                        ".Net",
-                        "MSSQL",
-                        "JQuery",
-                        "CSS"
-                    ]
-                }
-            ]
+            "projects": []
         },
 
         {
@@ -177,35 +144,7 @@
                 "start": "October 2013",
                 "end": "October 2015"
             }],
-            "projects": [
-                {
-                    "name": "uzmanpark.com",
-                    "role": "Team Leader",
-                    "tech": [
-                        "Backbone.js",
-                        "CSS",
-                        "Gulp"
-                    ]
-                },
-                {
-                    "name": "PuzzleTravel.com.tr",
-                    "role": "Team Leader",
-                    "tech": [
-                        "JQuery",
-                        "PHP",
-                        "CSS"
-                    ]
-                },
-                {
-                    "name": "GoNorthCyprus.com",
-                    "role": "Team Leader",
-                    "tech": [
-                        "JQuery",
-                        "PHP",
-                        "CSS"
-                    ]
-                }
-            ]
+            "projects": []
         }
     ]
 }
