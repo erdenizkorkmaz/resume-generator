@@ -7,6 +7,28 @@
     "github": "erdenizkorkmaz",
     "aboutme": "Hi, I'm Erdeniz, a web/mobile developer with over a decade of crafting standout web and mobile applications in Fintech, Tourism, and Education. Skilled in Angular, React, Next.js, Flutter, Node.js, .NET, MongoDB, and design with Figma, I focus on building secure, modern platforms with exceptional UI/UX. Currently, I'm expanding my expertise into team management and marketing.",
     "company": "",
+    "skills": {
+        "technical": [
+          "Angular",
+          "Vue",
+          "Next.js",
+          "Ionic",
+          "NodeJS",
+          "ExpressJS",
+          "Nginx",
+          "MongoDB",
+          "Figma",
+          "BackboneJS",
+          "ReactJS",
+          "NuxtJS",
+          "Strapi",
+          "Sanity.io",
+          "GSAP",
+          "LottieFiles",
+          "Webpack"
+        ],
+        "soft": ["Team Management", "Project Architecture", "UI/UX Design", "Communication", "Problem Solving"]
+    },
     "experiences": [
         {
             "company": "Dakik",

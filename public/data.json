@@ -6,7 +6,29 @@
     "phone": "+44 07950497404",
     "github": "erdenizkorkmaz",
     "aboutme": "Hi, I'm Erdeniz, a web/mobile developer with over a decade of crafting standout web and mobile applications in Fintech, Tourism, and Education. Skilled in Angular, React, Next.js, Flutter, Node.js, .NET, MongoDB, and design with Figma, I focus on building secure, modern platforms with exceptional UI/UX. Currently, I'm expanding my expertise into team management and marketing.",
-    "company": "",
+    "company": "Middle Recruitment LTD",    
+    "skills": {
+        "technical": [
+          "Angular",
+          "Vue",
+          "Next.js",
+          "Ionic",
+          "NodeJS",
+          "ExpressJS",
+          "Nginx",
+          "MongoDB",
+          "Figma",
+          "BackboneJS",
+          "ReactJS",
+          "NuxtJS",
+          "Strapi",
+          "Sanity.io",
+          "GSAP",
+          "LottieFiles",
+          "Webpack"
+        ],
+        "soft": ["Team Management", "Project Architecture", "UI/UX Design", "Communication", "Problem Solving"]
+    },
     "experiences": [
         {
             "company": "Dakik",
@@ -15,7 +37,10 @@
                 "start": "October 2021",
                 "end": "April 2024"
             }],
-            "description": "Founded Dakik when I move to London. As Director of Dakik, my journey in leading a team of creative minds is driven by a passion for making digital art that stands out. We crafted unique websites, apps, and logos, focusing on fast and reliable products to help businesses grow. I'm proud of every moment of it. You can find some of projects we developed.",
+            "bulletPoints": [
+                "Founded Dakik and led a team of developers and designers in creating standout digital solutions including websites, apps, and logos.",
+                "Enhanced client digital interfaces, significantly improving speed and reliability using technologies such as Angular, Node.js, and MongoDB."
+            ],
             "projects": [
                 {
                     "name": "jeton.com",
@@ -57,6 +82,7 @@
         {
             "company": "Mikro Yazilim",
             "description": "Started at Mikro, a Fintech company, as a Senior Frontend Developer and moved up to Team Leader within a year. My job was leading a team to build and test features that work well across different browsers. I also helped organize meetings to plan tasks with the design and QA teams. More details on these projects are below.",
+            "bulletPoints": [],
             "dates": [
                 {
                     "role" : "Senior Frontend Team Lead",
@@ -116,6 +142,7 @@
         {
             "company": "KissMyButton",
             "description": "In my four years at KissMyButton in Thessaloniki, Greece, I progressed from Mid-Level to Frontend Team Lead, steering projects that combined form and function for various clients. We leveraged React.js, Adobe Photoshop, and WordPress to create innovative and user-friendly web solutions. My role evolved from coding to leading a team, emphasizing collaboration in every project.",
+            "bulletPoints": [],
             "dates": [
                 {
                     "role": "Frontend Team Lead",
@@ -172,6 +199,7 @@
         {
             "company": "DMG",
             "description": "At DMG, a leading tourism company in Cyprus, I focused on crafting clean and efficient code. Collaborating closely with product and design teams, I played a key role in task definition and roadmap planning. Additionally, I took charge of updating the UI/UX designs of our applications, ensuring a seamless and engaging user experience.",
+            "bulletPoints": [],
             "dates": [{
                 "role": "Junior Frontend Developer",
                 "start": "October 2013",
