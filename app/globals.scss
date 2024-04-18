@@ -16,6 +16,18 @@ body {
   }
 }
 
+.print-flex { display: flex; }
+.print-flex-wrap { flex-wrap: wrap; }
+.print-flex-1 { flex: 1 1 50%; } /* Adjusting to ensure two items per row */
+.print-w-1-2 { width: 49%; }
+
+@media print {
+  .print-flex { display: flex; }
+  .print-flex-wrap { flex-wrap: wrap; }
+  .print-flex-1 { flex: 1 1 50%; } /* Adjusting to ensure two items per row */
+  .print-w-1-2 { width: 49%; }
+}
+
 .role-list {
   position:relative;
   &:before {

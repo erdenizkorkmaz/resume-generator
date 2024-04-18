@@ -5,29 +5,25 @@
     "mail": "erdeniz@dakik.co.uk",
     "phone": "+44 07950497404",
     "github": "erdenizkorkmaz",
-    "aboutme": "Hi, I'm Erdeniz, a web/mobile developer with over a decade of crafting standout web and mobile applications in Fintech, Tourism, and Education. Skilled in Angular, React, Next.js, Flutter, Node.js, .NET, MongoDB, and design with Figma, I focus on building secure, modern platforms with exceptional UI/UX. Currently, I'm expanding my expertise into team management and marketing.",
-    "company": "Middle Recruitment LTD",    
+    "aboutme": "Hi, I'm Erdeniz, a web/mobile developer with over a decade of crafting standout web and mobile applications in Fintech, Tourism, and Education. Skilled in .Net, React, Next.js, Flutter, Node.js, .NET, MongoDB, and design with Figma, I focus on building secure, modern platforms with exceptional UI/UX. Currently, I'm expanding my expertise into team management and marketing.",
     "skills": {
         "technical": [
-          "Angular",
-          "Vue",
-          "Next.js",
-          "Ionic",
-          "NodeJS",
-          "ExpressJS",
-          "Nginx",
-          "MongoDB",
-          "Figma",
-          "BackboneJS",
-          "ReactJS",
-          "NuxtJS",
-          "Strapi",
-          "Sanity.io",
-          "GSAP",
-          "LottieFiles",
-          "Webpack"
+            "React",
+            "Nextjs",
+            "Angular",
+            "Javascript",
+            "Typescript",
+            "CSS/SCSS",
+            "TailwindCSS",
+            "Nodejs",
+            "Express",
+            "React Native",
+            "Karma",
+            "Firebase",
+            "GraphQL",
+            "Cypress"
         ],
-        "soft": ["Team Management", "Project Architecture", "UI/UX Design", "Communication", "Problem Solving"]
+        "soft": ["Team Management", "Project Management", "UI/UX", "Scrum/Agile"]
     },
     "experiences": [
         {

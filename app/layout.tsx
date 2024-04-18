@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.scss";
 
-const inter = Inter({ subsets: ["latin"] });
+const open_sans = Open_Sans({subsets: ["latin"], weight: ['400', '500', '700']});
 
 export const metadata: Metadata = {
   title: "Erdeniz Korkmaz Resume",
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={open_sans.className}>{children}</body>
     </html>
   );
 }

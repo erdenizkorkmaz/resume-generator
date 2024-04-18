@@ -1,0 +1,246 @@
+{
+    "name":"Erdeniz Korkmaz",
+    "job":"Frontend Developer",
+    "location":"London, UK",
+    "mail":"erdeniz@dakik.co.uk",
+    "phone":"+44 07950497404",
+    "github":"erdenizkorkmaz",
+    "aboutme":"Hi, I'm Erdeniz Korkmaz. With over ten years in frontend development, I specialize in React, Next.js, Angular and Node.js. I founded Dakik, where I led projects that improved web and mobile usability. Passionate about creating user-friendly, visually appealing interfaces with Figma, I'm always ready to tackle new challenges in Frontend.",
+    "skills":{
+       "technical":[
+          "React",
+          "Nextjs",
+          "Angular",
+          "Javascript",
+          "Typescript",
+          "CSS/SCSS",
+          "TailwindCSS",
+          "Nodejs",
+          "Express",
+          "React Native",
+          "Karma",
+          "Firebase",
+          "GraphQL",
+          "Cypress"
+       ],
+       "soft":[
+          "Team Management",
+          "Project Management",
+          "UI/UX",
+          "Scrum/Agile"
+       ]
+    },
+    "experiences":[
+       {
+          "company":"Dakik",
+          "dates":[
+             {
+                "role":"Director",
+                "start":"October 2021",
+                "end":"April 2024"
+             }
+          ],
+          "description":"Founded Dakik and led a team of developers and designers in creating standout digital solutions including websites, apps, and logos. Enhanced client digital interfaces, significantly improving speed and reliability.",
+          "projects":[
+             {
+                "name":"jeton.com",
+                "role":"Sole Developer",
+                "tech":[
+                   "Angular",
+                   "Node.js",
+                   "MongoDB",
+                   "Redis",
+                   "Nginx",
+                   "Cloudflare"
+                ]
+             },
+             {
+                "name":"farmasi.com.tr",
+                "role":"Sole Developer",
+                "tech":[
+                    ".Net",
+                    "Bootstrap",
+                    "Jquery",
+                    "SCSS",
+                    "Cloudflare"
+                ]
+             },
+             {
+                "name":"financialhouse.io",
+                "role":"Sole Developer",
+                "tech":[
+                   "Angular",
+                   "Angular Universal",
+                   "Amazon S3",
+                   "Google Tag Manager"
+                ]
+             }
+          ]
+       },
+       {
+          "company":"Mikro Yazilim",
+          "description":"Started at Mikro, a Fintech company, as a Senior Frontend Developer and moved up to Team Leader within a year. My job was leading a team to build and test features that work well across different browsers. I also helped organize meetings to plan tasks with the design and QA teams. More details on these projects are below.",
+          "bulletPoints":[
+             
+          ],
+          "dates":[
+             {
+                "role":"Senior Frontend Team Lead",
+                "start":"June 2020",
+                "end":"October 2021"
+             },
+             {
+                "role":"Senior Frontend Developer",
+                "start":"September 2019",
+                "end":"June 2020"
+             }
+          ],
+          "projects":[
+             {
+                "name":"Internal Management Project",
+                "role":"Team Leader",
+                "tech":[
+                   "Next.js",
+                   "Node.js",
+                   "MongoDB",
+                   "Redis"
+                ]
+             },
+             {
+                "name":"EFatura Portal",
+                "role":"Sole Developer",
+                "tech":[
+                   "Vue.js",
+                   ".Net",
+                   "MSSQL"
+                ]
+             },
+             {
+                "name":"MikroX",
+                "role":"Sole Developer",
+                "tech":[
+                   "Vue.js",
+                   ".Net",
+                   "MSSQL",
+                   "Figma",
+                   "Zeplin"
+                ]
+             },
+             {
+                "name":"Internal Invocing System",
+                "role":"Sole Developer",
+                "tech":[
+                   "Node.js",
+                   "Redis",
+                   "MongoDB",
+                   "GrayLog",
+                   "SonarQube"
+                ]
+             }
+          ]
+       },
+       {
+          "company":"KissMyButton",
+          "description":"In my four years at KissMyButton in Thessaloniki, Greece, I progressed from Mid-Level to Frontend Team Lead, steering projects that combined form and function for various clients. We leveraged React.js, Adobe Photoshop, and WordPress to create innovative and user-friendly web solutions. My role evolved from coding to leading a team, emphasizing collaboration in every project.",
+          "bulletPoints":[
+             
+          ],
+          "dates":[
+             {
+                "role":"Frontend Team Lead",
+                "start":"July 2018",
+                "end":"September 2019"
+             },
+             {
+                "role":"Mid-Senior Frontend Developer",
+                "start":"October 2015",
+                "end":"July 2018"
+             }
+          ],
+          "projects":[
+             {
+                "name":"Ilonsi.com",
+                "role":"Team Leader",
+                "tech":[
+                   "Vue.js",
+                   "PHP Laravel",
+                   "MySQL"
+                ]
+             },
+             {
+                "name":"finuans.com",
+                "role":"Team Leader",
+                "tech":[
+                   "Vue.js",
+                   "PHP Laravel",
+                   "MySQL"
+                ]
+             },
+             {
+                "name":"Explace - Android App",
+                "role":"Team Leader",
+                "tech":[
+                   "React Native",
+                   "Firebase",
+                   "Node.Js"
+                ]
+             },
+             {
+                "name":"AmyVillas.co.uk",
+                "role":"Team Leader",
+                "tech":[
+                   ".Net",
+                   "MSSQL",
+                   "JQuery",
+                   "CSS"
+                ]
+             }
+          ]
+       },
+       {
+          "company":"DMG",
+          "description":"At DMG, a leading tourism company in Cyprus, I focused on crafting clean and efficient code. Collaborating closely with product and design teams, I played a key role in task definition and roadmap planning. Additionally, I took charge of updating the UI/UX designs of our applications, ensuring a seamless and engaging user experience.",
+          "bulletPoints":[
+             
+          ],
+          "dates":[
+             {
+                "role":"Junior Frontend Developer",
+                "start":"October 2013",
+                "end":"October 2015"
+             }
+          ],
+          "projects":[
+             {
+                "name":"uzmanpark.com",
+                "role":"Team Leader",
+                "tech":[
+                   "Backbone.js",
+                   "CSS",
+                   "Gulp"
+                ]
+             },
+             {
+                "name":"puzzletravel.com.tr",
+                "role":"Team Leader",
+                "tech":[
+                   "JQuery",
+                   "PHP",
+                   "CSS"
+                ]
+             },
+             {
+                "name":"gonorthcyprus.com",
+                "role":"Team Leader",
+                "tech":[
+                   ".Net",
+                   "Bootstrap",
+                   "Jquery",
+                   "SCSS",
+                   "Cloudflare"
+                ]
+             }
+          ]
+       }
+    ]
+ }

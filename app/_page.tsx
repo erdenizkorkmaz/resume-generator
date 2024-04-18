@@ -3,7 +3,7 @@ import path from 'path';
 import Link from 'next/link';
 
 async function getData() {
-  const filePath = path.join(process.cwd(), 'public', 'data.json');
+  const filePath = path.join(process.cwd(), 'public', 'frontend.json');
   const jsonData = fs.readFileSync(filePath, 'utf8');
 
   const data = JSON.parse(jsonData);
@@ -64,7 +64,7 @@ export default async function Home() {
 
                 <ul className="flex flex-col flex-wrap gap-1">
                   { item.projects.map((project: any, index: number) => {
-                    return <li key={index} className="flex-col gap-1 py-1 px-4 border-b">
+                    return <li key={index} className="flex flex-col gap-1 py-1 px-4 border-b">
                       <h4 className='font-medium text-gray-800 tracking-tight leading-snug'>{project.name}</h4>
                       <div className='flex flex-wrap text-gray-500'>
                         {project.tech.map((tech: string, index: number) => {
