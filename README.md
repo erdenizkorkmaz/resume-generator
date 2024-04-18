@@ -48,6 +48,7 @@ Contributors
 Thanks to the following people who have contributed to this project:
 
 @erdenizkorkmaz
+
 Contact
 
 If you want to contact me, you can reach me at erdeniz@dakik.co.uk.
