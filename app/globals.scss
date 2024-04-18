@@ -1,35 +1,31 @@
+/* Tailwind CSS imports */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Root color variables */
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 0, 0, 0; /* black color in rgb format */
 }
 
+/* Base body styles */
 body {
-  color: rgb(var(--foreground-rgb));
+  color: rgb(var(--foreground-rgb)); /* Using variable for color */
 }
 
+/* Utility classes */
 @layer utilities {
+  /* Text balancing utility for better text alignment */
   .text-balance {
     text-wrap: balance;
   }
 }
 
-.print-flex { display: flex; }
-.print-flex-wrap { flex-wrap: wrap; }
-.print-flex-1 { flex: 1 1 50%; } /* Adjusting to ensure two items per row */
-.print-w-1-2 { width: 49%; }
-
-@media print {
-  .print-flex { display: flex; }
-  .print-flex-wrap { flex-wrap: wrap; }
-  .print-flex-1 { flex: 1 1 50%; } /* Adjusting to ensure two items per row */
-  .print-w-1-2 { width: 49%; }
-}
-
+/* Styling for lists indicating roles or similar items */
 .role-list {
-  position:relative;
+  position: relative;
+
+  /* Vertical line in the middle of the list */
   &:before {
     content: "";
     position: absolute;
@@ -42,15 +38,18 @@ body {
     transform: translateY(-50%);
     z-index: -1;
   }
-  li{
-    position:relative;
+
+  li {
+    position: relative;
     padding-left: 12px;
+
+    /* Bullet points as small circles */
     &:before {
       content: "";
       position: absolute;
       width: 6px;
       height: 6px;
-      background: #1f2937;
+      background: #1f2937; /* dark gray/blue color */
       border-radius: 50%;
       left: 0;
       top: 50%;
@@ -59,3 +58,36 @@ body {
   }
 }
 
+  /* Additional print styles for clearer view on browser */
+  .print-flex {
+    display: flex;
+  }
+  .print-flex-wrap {
+    flex-wrap: wrap;
+  }
+  .print-w-1-2 {
+    width: 49%;
+  }
+  .page-break {
+    page-break-after: always;
+  }
+
+  /* Print styles grouped together for clarity */
+  @media print {
+    /* Flex container setup for printing */
+    .print-flex {
+      display: flex;
+    }
+    .print-flex-wrap {
+      flex-wrap: wrap;
+    }
+    .print-flex-1 {
+      flex: 1 1 50%; /* flexible box that takes half of the space */
+    }
+    .print-w-1-2 {
+      width: 49%; /* slightly less than half width to avoid rounding issues */
+    }
+    .page-break {
+      page-break-after: always; /* forces page break after the element */
+    }
+  }
