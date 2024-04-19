@@ -5,7 +5,7 @@
     "mail":"erdeniz@dakik.co.uk",
     "phone":"+44 07950497404",
     "github":"erdenizkorkmaz",
-    "aboutme":"Hi, I'm Erdeniz Korkmaz. With over ten years in fullstack development, I specialize in React, Next.js, Angular and Node.js. I founded Dakik, where I led projects that improved web and mobile usability. Passionate about creating user-friendly, visually appealing interfaces with Figma, I'm always ready to tackle new challenges in Frontend.",
+    "aboutme":"Hi, I'm Erdeniz Korkmaz. With over ten years in web development, I specialize in React, Next.js, Angular and Node.js. I founded Dakik, where I led projects that improved web and mobile usability. Passionate about creating user-friendly, visually appealing interfaces with Figma, I'm always ready to tackle new challenges.",
     "skills":{
        "technical":[
          "React",
@@ -45,7 +45,7 @@
                 "end":"April 2024"
              }
           ],
-          "description":"Founded Dakik and led a team of developers and designers in creating standout digital solutions including websites, apps, and logos. Enhanced client digital interfaces, significantly improving speed and reliability.",
+          "description":"I founded Dakik, where I led a team of talented developers and designers in creating exceptional digital solutions, such as websites, apps, and logos. Under my leadership, we focused on enhancing digital interfaces, significantly boosting their speed and reliability, which greatly improved user satisfaction and operational efficiency.",
           "projects":[
              {
                 "name":"jeton.com",
@@ -84,7 +84,7 @@
        },
        {
           "company":"Mikro Yazilim",
-          "description":"Started at Mikro, a Fintech company, as a Senior Frontend Developer and moved up to Team Leader within a year. My job was leading a team to build and test features that work well across different browsers. I also helped organize meetings to plan tasks with the design and QA teams. More details on these projects are below.",
+          "description":"I began my journey at Mikro as a Fullstack Developer and quickly ascended to the role of Team Leader within a year. My responsibilities included leading a team to build and rigorously test features that were compatible across various browsers. I also coordinated with the design and QA teams to plan tasks and streamline our development process.",
           "bulletPoints":[
              
           ],
@@ -146,7 +146,7 @@
        },
        {
           "company":"KissMyButton",
-          "description":"In my four years at KissMyButton in Thessaloniki, Greece, I progressed from Mid-Level to Frontend Team Lead, steering projects that combined form and function for various clients. We leveraged React.js, Adobe Photoshop, and WordPress to create innovative and user-friendly web solutions. My role evolved from coding to leading a team, emphasizing collaboration in every project.",
+          "description":"During my four years at KissMyButton, I advanced from a Mid-Level Developer to Team Lead. I guided projects that merged aesthetics with functionality for diverse clients. Our tools of choice were React.js, Adobe Photoshop, and WordPress, which we used to develop innovative and user-friendly web solutions. My responsibilities expanded from hands-on coding to leading and fostering teamwork in every project.",
           "bulletPoints":[
              
           ],
@@ -204,7 +204,7 @@
        },
        {
           "company":"DMG",
-          "description":"At DMG, a leading tourism company in Cyprus, I focused on crafting clean and efficient code. Collaborating closely with product and design teams, I played a key role in task definition and roadmap planning. Additionally, I took charge of updating the UI/UX designs of our applications, ensuring a seamless and engaging user experience.",
+          "description":"At DMG, my role centered around crafting clean and efficient code. I collaborated closely with the product and design teams, playing a pivotal role in defining tasks and planning our project roadmaps. I also took the lead in updating the UI/UX designs of our applications, focusing on creating a seamless and engaging user experience that resonated well with users.",
           "bulletPoints":[
              
           ],
