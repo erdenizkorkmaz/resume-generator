@@ -1,27 +1,32 @@
 {
     "name":"Erdeniz Korkmaz",
-    "job":"Frontend Developer",
+    "job":"Fullstack Developer",
     "location":"London, UK",
     "mail":"erdeniz@dakik.co.uk",
     "phone":"+44 07950497404",
     "github":"erdenizkorkmaz",
-    "aboutme":"Hi, I'm Erdeniz Korkmaz. With over ten years in frontend development, I specialize in React, Next.js, Angular and Node.js. I founded Dakik, where I led projects that improved web and mobile usability. Passionate about creating user-friendly, visually appealing interfaces with Figma, I'm always ready to tackle new challenges in Frontend.",
+    "aboutme":"Hi, I'm Erdeniz Korkmaz. With over ten years in fullstack development, I specialize in React, Next.js, Angular and Node.js. I founded Dakik, where I led projects that improved web and mobile usability. Passionate about creating user-friendly, visually appealing interfaces with Figma, I'm always ready to tackle new challenges in Frontend.",
     "skills":{
        "technical":[
-          "React",
-          "Nextjs",
-          "Angular",
-          "Javascript",
-          "Typescript",
-          "CSS/SCSS",
-          "TailwindCSS",
-          "Nodejs",
-          "Express",
-          "React Native",
-          "Karma",
-          "Firebase",
-          "GraphQL",
-          "Cypress"
+         "React",
+         "Nextjs",
+         "Angular",
+         "Javascript",
+         "Typescript",
+         "CSS/SCSS",
+         "TailwindCSS",
+         ".Net",
+         "Nodejs",
+         "Python",
+         "Redis",
+         "MongoDB",
+         "MYSQL",
+         "Express",
+         "React Native",
+         "Karma",
+         "Firebase",
+         "GraphQL",
+         "Cypress"
        ],
        "soft":[
           "Team Management",
@@ -85,12 +90,12 @@
           ],
           "dates":[
              {
-                "role":"Senior Frontend Team Lead",
+                "role":"Developer Team Lead",
                 "start":"June 2020",
                 "end":"October 2021"
              },
              {
-                "role":"Senior Frontend Developer",
+                "role":"Fullstack Developer",
                 "start":"September 2019",
                 "end":"June 2020"
              }
@@ -147,12 +152,12 @@
           ],
           "dates":[
              {
-                "role":"Frontend Team Lead",
+                "role":"Developer Team Lead",
                 "start":"July 2018",
                 "end":"September 2019"
              },
              {
-                "role":"Mid-Senior Frontend Developer",
+                "role":"Mid-Senior Developer",
                 "start":"October 2015",
                 "end":"July 2018"
              }
@@ -205,7 +210,7 @@
           ],
           "dates":[
              {
-                "role":"Junior Frontend Developer",
+                "role":"Junior Developer",
                 "start":"October 2013",
                 "end":"October 2015"
              }

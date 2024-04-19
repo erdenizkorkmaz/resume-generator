@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const UserProfile = ({data}: {data: UserData}) => {
   return (
-    <main className="flex min-h-screen flex-col gap-2 p-2 text-[0.65rem] text-slate-900 max-w-[794px] mx-auto font-light antialiased">
+    <main className="flex min-h-screen flex-col gap-3 p-2 text-[0.65rem] text-slate-900 max-w-[794px] mx-auto font-light antialiased">
       <UserHeader data={data} />
       <UserExperiences experiences={data.experiences} />
     </main>
@@ -12,17 +12,17 @@ const UserProfile = ({data}: {data: UserData}) => {
 };
 
 const UserHeader = ({ data }: { data: UserData }) => (
-  <div className="flex flex-col gap-2 pb-4 pt-2 px-4 border border-slate-200 bg-slate-100 rounded-[18px]">
+  <div className="flex flex-col gap-2 pb-4 pt-2 px-4 border border-slate-950 bg-slate-800 text-slate-100 rounded-[18px]">
     <div className="flex items-center justify-between">
       <div className="flex flex-col gap-1">
-        <h1 className="text-xl font-semibold tracking-tight">
+        <h1 className="text-xl text-blue-500 font-semibold tracking-tight">
           {data.name} - {data.job}
         </h1>
         <UserContact data={data} />
       </div>
       {data.company && <CompanyInfo company={data.company} />}
     </div>
-    <p className="tracking-tight leading-snug">“{data.aboutme}”</p>
+    <p className="tracking-tight leading-snug">{data.aboutme}</p>
     <UserSkills skills={data.skills} />
   </div>
 );
@@ -53,14 +53,14 @@ const SkillSet = ({ title, skills }: { title: string; skills: string[] }) => (
   <div className="flex flex-col gap-1">
     <h3 className="text-sm font-semibold">{title}</h3>
     <div className="flex flex-wrap gap-2">
-      {skills.map((skill, index) => <span key={index} className="px-2 py-1 bg-slate-200 border border-slate-300 rounded-md">{skill}</span>)}
+      {skills.map((skill, index) => <span key={index} className="px-2 py-1 border-slate-800 bg-slate-700 border rounded-md">{skill}</span>)}
     </div>
   </div>
 );
 
 const UserExperiences = ({ experiences }: { experiences: UserData['experiences'] }) => (
   <div className="flex flex-col">
-    <h2 className="text-base font-semibold">Work Experiences</h2>
+    <h2 className="text-blue-500 text-base font-semibold">Work Experiences</h2>
     <ul className="flex flex-col gap-[16px] mt-1">
       {experiences.map((experience, index) => <ExperienceDetails key={index} experience={experience} />)}
     </ul>
@@ -68,10 +68,10 @@ const UserExperiences = ({ experiences }: { experiences: UserData['experiences']
 );
 
 const ExperienceDetails = ({ experience }: { experience: UserData['experiences'][number] }) => (
-  <li className="flex flex-col gap-[6px]">
+  <li className="flex flex-col gap-[5px]">
     <h3 className="text-sm font-medium leading-snug">{experience.company}</h3>
     <RoleDates dates={experience.dates} />
-    {experience.description && <p className="leading-snug">“{experience.description}”</p>}
+    {experience.description && <p className="leading-snug m-0">{experience.description}</p>}
     <ProjectList projects={experience.projects} />
   </li>
 );
@@ -87,7 +87,7 @@ const RoleDates = ({ dates }: { dates: UserData['experiences'][number]['dates'] 
 );
 
 const ProjectList = ({ projects }: { projects: UserData['experiences'][number]['projects'] }) => (
-  <ul className="print-flex print-flex-wrap gap-2 mt-1">
+  <ul className="print-flex print-flex-wrap gap-2">
     {projects.map((project, index) => (
       <li key={index} className="print-w-1-2 content-center px-3 py-2 bg-slate-100 border border-slate-200 rounded-lg">
         <h4 className="font-semibold tracking-tight leading-snug">{project.name}</h4>
