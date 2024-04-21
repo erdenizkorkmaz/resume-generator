@@ -5,7 +5,8 @@
     "mail":"erdeniz@dakik.co.uk",
     "phone":"+44 07950497404",
     "github":"erdenizkorkmaz",
-    "aboutme":"Hi, I'm Erdeniz Korkmaz. With over ten years in web development, I specialize in React, Next.js, Angular and Node.js. I founded Dakik, where I led projects that improved web and mobile usability. Passionate about creating user-friendly, visually appealing interfaces with Figma, I'm always ready to tackle new challenges.",
+    "aboutme":"Hi, I'm Erdeniz Korkmaz. With over ten years in web development, I specialize in Next.js, Angular, .Net and Node.js. I founded Dakik, where I led projects that improved web and mobile usability. Passionate about creating user-friendly, visually appealing interfaces with Figma, I'm always ready to tackle new challenges.",
+    "company": "hello.co.uk",
     "skills":{
        "technical":[
          "React",
