@@ -1,0 +1,57 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Job {
+  id              String   @id @default(cuid())
+  remoteOkId      String   @unique
+  company         String
+  position        String
+  description     String
+  location        String
+  url             String
+  tags            String[]
+  salary          String?
+  postedAt        DateTime
+  source          String   @default("RemoteOK")
+  
+  // Application tracking
+  applied         Boolean  @default(false)
+  appliedAt       DateTime?
+  notes           String?
+  
+  // Custom CV for this job
+  customCv        CustomCv?
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@index([applied])
+  @@index([postedAt])
+}
+
+model CustomCv {
+  id              String   @id @default(cuid())
+  jobId           String   @unique
+  job             Job      @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  
+  // The customized CV content (JSON)
+  content         Json
+  
+  // Raw response from AI for reference
+  aiResponse      String   @db.Text
+  
+  // Generation metadata
+  modelUsed       String   @default("minimax/minimax-m2.5")
+  generatedAt     DateTime @default(now())
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
