@@ -28,34 +28,49 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { remoteOkId, company, position, description, location, url, tags, salary, postedAt } = body;
     
+    // Validate required fields
+    if (!remoteOkId || !company || !position) {
+      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
+    }
+    
+    // Ensure tags is an array
+    const normalizedTags = Array.isArray(tags) ? tags : [];
+    
+    // Ensure salary is string or null
+    const normalizedSalary = salary === null || salary === undefined ? null : String(salary);
+    
+    console.log('Creating job with data:', { remoteOkId, company, position, tags: normalizedTags, salary: normalizedSalary });
+    
     const job = await prisma.job.upsert({
-      where: { remoteOkId },
+      where: { remoteOkId: String(remoteOkId) },
       update: {
-        company,
-        position,
-        description,
-        location,
-        url,
-        tags,
-        salary,
-        postedAt: new Date(postedAt),
+        company: String(company),
+        position: String(position),
+        description: String(description || ''),
+        location: String(location || 'Remote'),
+        url: String(url || ''),
+        tags: normalizedTags,
+        salary: normalizedSalary,
+        postedAt: new Date(postedAt || Date.now()),
       },
       create: {
-        remoteOkId,
-        company,
-        position,
-        description,
-        location,
-        url,
-        tags,
-        salary,
-        postedAt: new Date(postedAt),
+        remoteOkId: String(remoteOkId),
+        company: String(company),
+        position: String(position),
+        description: String(description || ''),
+        location: String(location || 'Remote'),
+        url: String(url || ''),
+        tags: normalizedTags,
+        salary: normalizedSalary,
+        postedAt: new Date(postedAt || Date.now()),
       },
     });
     
     return NextResponse.json(job);
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error creating job:', error);
-    return NextResponse.json({ error: 'Failed to create job' }, { status: 500 });
+    console.error('Error message:', error.message);
+    console.error('Error code:', error.code);
+    return NextResponse.json({ error: 'Failed to create job', details: error.message }, { status: 500 });
   }
 }
