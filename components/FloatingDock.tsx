@@ -49,7 +49,6 @@ export default function FloatingDock() {
             >
               {item.icon}
               
-              <!-- Tooltip -->
               <span className="
                 absolute left-full ml-3 px-2 py-1 bg-slate-800 text-white text-xs rounded-md
                 opacity-0 invisible group-hover:opacity-100 group-hover:visible

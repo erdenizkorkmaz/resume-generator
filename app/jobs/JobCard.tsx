@@ -18,7 +18,7 @@ interface JobCardProps {
     savedData: {
       id: string;
       applied: boolean;
-      customCv: {
+      customCv?: {
         id: string;
         content: any;
         generatedAt: string;

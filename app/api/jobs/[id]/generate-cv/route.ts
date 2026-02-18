@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import userData from '@/public/data.json';
 
+export const dynamic = 'force-dynamic';
+
 // POST /api/jobs/[id]/generate-cv - Generate custom CV using OpenRouter
 export async function POST(
   req: NextRequest,

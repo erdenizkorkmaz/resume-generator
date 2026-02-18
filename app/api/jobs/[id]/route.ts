@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 
+export const dynamic = 'force-dynamic';
+
 // PATCH /api/jobs/[id] - Update job (applied status, notes)
 export async function PATCH(
   req: NextRequest,
