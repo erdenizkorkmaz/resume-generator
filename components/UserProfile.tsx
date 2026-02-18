@@ -1,14 +1,19 @@
 "use client"
 import { UserData } from '../types/userData';
+import { JobsData } from './JobsList';
 import Link from 'next/link';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 
-const UserProfile = ({data}: {data: UserData}) => {
+const JobsList = dynamic(() => import('./JobsList'), { ssr: false });
+
+const UserProfile = ({data, jobs}: {data: UserData; jobs?: JobsData}) => {
   return (
     <main className="relative flex min-h-screen flex-col gap-3 p-2 text-[0.65rem] text-slate-900 max-w-[794px] mx-auto font-light antialiased">
       <Image className='absolute opacity-40 -top-[1rem]  w-full max-w-none' src="/beams-home@95.jpg" alt="logo" width={100} height={100} />
       <UserHeader data={data} />
       <UserExperiences experiences={data.experiences} />
+      {jobs && jobs.jobs.length > 0 && <JobsSection jobs={jobs} />}
     </main>
   );
 };
@@ -103,6 +108,31 @@ const ProjectList = ({ projects }: { projects: UserData['experiences'][number]['
       </li>
     ))}
   </ul>
+);
+
+const JobsSection = ({ jobs }: { jobs: JobsData }) => (
+  <div className="flex flex-col z-10 mt-4 print:hidden">
+    <div className="flex items-center justify-between mb-2">
+      <h2 className="text-base font-semibold">Remote AI & Dev Jobs</h2>
+      <span className="text-xs text-slate-400">
+        Updated {new Date(jobs.last_updated).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+      </span>
+    </div>
+    <p className="text-xs text-slate-600 mb-3">
+      Curated contractor and remote opportunities in AI and software development.
+    </p>
+    <JobsList jobs={jobs.jobs} />
+    <div className="mt-3 text-center">
+      <Link 
+        href="https://remoteok.com" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="text-xs text-sky-600 hover:text-sky-700 font-medium"
+      >
+        View more on RemoteOK →
+      </Link>
+    </div>
+  </div>
 );
 
 export default UserProfile;
