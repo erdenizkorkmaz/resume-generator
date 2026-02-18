@@ -33,6 +33,7 @@ export default function JobsPage() {
   const [selectedCv, setSelectedCv] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [generatingCv, setGeneratingCv] = useState<string | null>(null);
+  const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
 
   useEffect(() => {
     fetchJobs();
@@ -171,7 +172,17 @@ export default function JobsPage() {
     }
   };
 
-  const handleGenerateCv = async (jobId: string, dbId?: string) => {
+  const handleGenerateCv = async (jobId: string, dbId?: string, forceRegenerate: boolean = false) => {
+    // Check if CV already exists and we're not forcing regeneration
+    const job = jobs.find(j => j.apiData.id === jobId);
+    if (job?.savedData?.customCv && !forceRegenerate) {
+      // CV already exists, just show it
+      setSelectedCv(job.savedData.customCv.content);
+      setSelectedJobId(jobId);
+      setIsModalOpen(true);
+      return;
+    }
+    
     setGeneratingCv(jobId);
     
     try {
@@ -179,22 +190,22 @@ export default function JobsPage() {
       
       // If no dbId, create job first
       if (!targetDbId) {
-        const job = jobs.find(j => j.apiData.id === jobId)?.apiData;
-        if (!job) return;
+        const jobData = job?.apiData;
+        if (!jobData) return;
         
         const res = await fetch('/api/jobs', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            remoteOkId: job.id,
-            company: job.company,
-            position: job.position,
-            description: job.description,
-            location: job.location,
-            url: job.url,
-            tags: job.tags,
-            salary: job.salary,
-            postedAt: job.postedAt,
+            remoteOkId: jobData.id,
+            company: jobData.company,
+            position: jobData.position,
+            description: jobData.description,
+            location: jobData.location,
+            url: jobData.url,
+            tags: jobData.tags,
+            salary: jobData.salary,
+            postedAt: jobData.postedAt,
           }),
         });
         
@@ -227,6 +238,7 @@ export default function JobsPage() {
       
       // Open modal to show the CV
       setSelectedCv(data.customCv.content);
+      setSelectedJobId(jobId);
       setIsModalOpen(true);
     } catch (error) {
       console.error('Error generating CV:', error);
@@ -236,9 +248,20 @@ export default function JobsPage() {
     }
   };
 
-  const handleViewCv = (cvContent: any) => {
+  const handleViewCv = (cvContent: any, jobId?: string) => {
     setSelectedCv(cvContent);
+    setSelectedJobId(jobId || null);
     setIsModalOpen(true);
+  };
+
+  const handleRegenerateCv = async () => {
+    if (!selectedJobId) return;
+    
+    const job = jobs.find(j => j.apiData.id === selectedJobId);
+    if (!job?.savedData?.id) return;
+    
+    setIsModalOpen(false);
+    await handleGenerateCv(selectedJobId, job.savedData.id, true);
   };
 
   if (loading) {
@@ -283,8 +306,8 @@ export default function JobsPage() {
               key={job.apiData.id}
               job={job}
               onAppliedChange={handleAppliedChange}
-              onGenerateCv={handleGenerateCv}
-              onViewCv={handleViewCv}
+              onGenerateCv={(jobId, dbId) => handleGenerateCv(jobId, dbId, false)}
+              onViewCv={(cvContent) => handleViewCv(cvContent, job.apiData.id)}
               isGenerating={generatingCv === job.apiData.id}
             />
           ))}
@@ -300,6 +323,8 @@ export default function JobsPage() {
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
           cvContent={selectedCv}
+          onRegenerate={handleRegenerateCv}
+          hasExistingCv={selectedJobId ? jobs.find(j => j.apiData.id === selectedJobId)?.savedData?.customCv != null : false}
         />
       </div>
     </main>

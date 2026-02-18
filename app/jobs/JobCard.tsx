@@ -27,7 +27,7 @@ interface JobCardProps {
   };
   onAppliedChange: (jobId: string, applied: boolean, dbId?: string) => void;
   onGenerateCv: (jobId: string, dbId?: string) => void;
-  onViewCv: (cvContent: any) => void;
+  onViewCv: (cvContent: any, jobId: string) => void;
   isGenerating: boolean;
 }
 
@@ -117,7 +117,7 @@ export default function JobCard({ job, onAppliedChange, onGenerateCv, onViewCv, 
           
           {savedData?.customCv ? (
             <button
-              onClick={() => onViewCv(savedData.customCv!.content)}
+              onClick={() => onViewCv(savedData.customCv!.content, apiData.id)}
               className="py-2 px-4 bg-purple-100 text-purple-700 rounded-lg hover:bg-purple-200 transition-colors text-sm font-medium"
             >
               View CV

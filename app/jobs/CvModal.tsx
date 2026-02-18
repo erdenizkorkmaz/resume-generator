@@ -6,9 +6,11 @@ interface CvModalProps {
   isOpen: boolean;
   onClose: () => void;
   cvContent: any;
+  onRegenerate?: () => void;
+  hasExistingCv?: boolean;
 }
 
-export default function CvModal({ isOpen, onClose, cvContent }: CvModalProps) {
+export default function CvModal({ isOpen, onClose, cvContent, onRegenerate, hasExistingCv }: CvModalProps) {
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -56,12 +58,22 @@ export default function CvModal({ isOpen, onClose, cvContent }: CvModalProps) {
       <div className="bg-white rounded-xl max-w-[794px] w-full max-h-[90vh] overflow-hidden shadow-2xl">
         <div className="flex items-center justify-between p-4 border-b sticky top-0 bg-white">
           <h2 className="text-lg font-semibold">Customized CV for This Job</h2>
-          <button
-            onClick={onClose}
-            className="p-2 hover:bg-slate-100 rounded-lg transition-colors"
-          >
-            ✕
-          </button>
+          <div className="flex items-center gap-2">
+            {hasExistingCv && onRegenerate && (
+              <button
+                onClick={onRegenerate}
+                className="px-3 py-1.5 text-sm bg-sky-100 text-sky-700 rounded-lg hover:bg-sky-200 transition-colors"
+              >
+                Regenerate
+              </button>
+            )}
+            <button
+              onClick={onClose}
+              className="p-2 hover:bg-slate-100 rounded-lg transition-colors"
+            >
+              ✕
+            </button>
+          </div>
         </div>
         
         <div className="p-6 overflow-auto max-h-[calc(90vh-80px)]">
