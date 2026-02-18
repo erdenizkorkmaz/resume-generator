@@ -66,7 +66,6 @@ export default function CvModal({ isOpen, onClose, cvContent }: CvModalProps) {
         
         <div className="p-6 overflow-auto max-h-[calc(90vh-80px)]">
           <div className="prose prose-slate max-w-none">
-            <!-- Header -->
             <div className="border-b pb-4 mb-4">
               <h1 className="text-2xl font-bold text-slate-900">{cvContent.name || 'Erdeniz Korkmaz'}</h1>
               <p className="text-lg text-slate-600">{cvContent.job || 'Fullstack Developer'}</p>
@@ -77,7 +76,6 @@ export default function CvModal({ isOpen, onClose, cvContent }: CvModalProps) {
               </div>
             </div>
             
-            <!-- About -->
             {cvContent.aboutme && (
               <div className="mb-4">
                 <h3 className="text-lg font-semibold mb-2">About</h3>
@@ -85,7 +83,6 @@ export default function CvModal({ isOpen, onClose, cvContent }: CvModalProps) {
               </div>
             )}
             
-            <!-- Skills -->
             {cvContent.skills && (
               <div className="mb-4">
                 <h3 className="text-lg font-semibold mb-2">Skills</h3>
@@ -97,7 +94,6 @@ export default function CvModal({ isOpen, onClose, cvContent }: CvModalProps) {
               </div>
             )}
             
-            <!-- Experience -->
             {cvContent.experiences && (
               <div className="mb-4">
                 <h3 className="text-lg font-semibold mb-2">Experience</h3>
@@ -112,7 +108,6 @@ export default function CvModal({ isOpen, onClose, cvContent }: CvModalProps) {
               </div>
             )}
             
-            <!-- Raw JSON view option -->
             <details className="mt-6">
               <summary className="cursor-pointer text-sm text-slate-500 hover:text-slate-700">View Raw JSON</summary>
               <pre className="mt-2 p-4 bg-slate-50 rounded-lg text-xs overflow-auto">
