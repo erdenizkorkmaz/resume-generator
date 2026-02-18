@@ -78,7 +78,7 @@ export default function CvModal({ isOpen, onClose, cvContent, onRegenerate, hasE
         
         <div className="p-6 overflow-auto max-h-[calc(90vh-80px)]">
           <div className="flex flex-col gap-3 text-[0.65rem] text-slate-900 font-light antialiased">
-            <!-- Header -->
+            
             <div className="relative flex flex-col gap-2 pb-5 pt-2 border-b border-slate-900/10">
               <div className="flex items-center justify-between">
                 <div className="flex flex-col gap-1">
@@ -96,7 +96,7 @@ export default function CvModal({ isOpen, onClose, cvContent, onRegenerate, hasE
               
               <p className="tracking-tight leading-snug text-slate-700">{cvContent.aboutme}</p>
               
-              <!-- Skills -->
+              
               {cvContent.skills && (
                 <div className="flex flex-col gap-2 mt-2">
                   {cvContent.skills.technical && cvContent.skills.technical.length > 0 && (
@@ -135,7 +135,7 @@ export default function CvModal({ isOpen, onClose, cvContent, onRegenerate, hasE
               </div>
             </div>
             
-            <!-- Experience -->
+            
             {cvContent.experiences && cvContent.experiences.length > 0 && (
               <div className="flex flex-col z-10 mt-2">
                 <h2 className="text-base font-semibold">Work Experiences</h2>
@@ -158,7 +158,7 @@ export default function CvModal({ isOpen, onClose, cvContent, onRegenerate, hasE
                         <p className="leading-snug m-0 text-slate-700">{experience.description}</p>
                       )}
                       
-                      <!-- Projects -->
+                      
                       {experience.projects && experience.projects.length > 0 && (
                         <ul className="flex flex-wrap gap-2">
                           {experience.projects.map((project: any, pidx: number) => (
@@ -176,7 +176,7 @@ export default function CvModal({ isOpen, onClose, cvContent, onRegenerate, hasE
               </div>
             )}
             
-            <!-- Raw JSON view option -->
+            
             <details className="mt-6">
               <summary className="cursor-pointer text-sm text-slate-500 hover:text-slate-700">View Raw JSON</summary>
               <pre className="mt-2 p-4 bg-slate-50 rounded-lg text-xs overflow-auto">
